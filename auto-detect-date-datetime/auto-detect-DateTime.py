@@ -1,10 +1,8 @@
-import pandas as pd
+from pandas.api.types import is_datetime64_any_dtype as is_datetime
 def detect_datetime(path_to_filename):
     df = pd.read_csv(path_to_filename)
+    columns = []
     for column in df.columns:
-        if df[column].dtype == 'object':
-            try:
-                df[column] = pd.to_datetime(df[column])
-            except ValueError:
-                print("Not a datetime compatible data-type")
-    return df
+        if is_datetime(df[column])):
+            columns.append(column)
+    return columns
