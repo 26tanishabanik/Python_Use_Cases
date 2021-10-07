@@ -1,17 +1,19 @@
 ## Auto-detect-datetime
 
-A script to detect date and datetime columns separately from a dataframe
+A script to detect date and datetime columns separately from a pandas dataframe
 
-This program has one function:
+This program has following functions:
 
 * Read the csv file
 * Detect datetime/date columns
-* Return the columns
+* Print the columns
 
 
-For executing the above functionalities the "Pandas" library of Python.
+For executing the above functionalities the "Pandas" and "Numpy" libraries of Python.
 
 Following command is used for using it in the script:
 
 * `pip install pandas`
-* `from pandas.api.types import is_datetime64_any_dtype as is_datetime`
+* `pip install numpy`
+* `import pandas as pd`
+* `import numpy as np`
